@@ -72,16 +72,16 @@
     <div class="event-card reveal d1" style="margin-top:40px">
       <div class="when">
         <span class="badge">Next</span>
-        <span class="date">2026年<br>7月 開催予定</span>
-        <span class="st">日程調整中</span>
+        <span class="date" data-cms="seminar.nextDate">2026年<br>7月 開催予定</span>
+        <span class="st" data-cms="seminar.nextStatus">日程調整中</span>
       </div>
       <div class="det">
         <h3>第2回 体験会・韓国美容セミナー</h3>
-        <p>次回開催に向けて、現在日程を調整中です。参加をご希望の方は、お問い合わせフォームまたは LINE よりお気軽にご連絡ください。詳細が決まり次第、個別にご案内いたします。</p>
+        <p data-cms="seminar.nextDesc">次回開催に向けて、現在日程を調整中です。参加をご希望の方は、お問い合わせフォームまたは LINE よりお気軽にご連絡ください。詳細が決まり次第、個別にご案内いたします。</p>
         <div class="tags"><span>体験会</span><span>韓国美容セミナー</span><span>サロン様向け</span><span>定員制</span></div>
         <div class="btn-row" style="margin-top:24px">
           <a class="btn" href="contact.html">参加について問い合わせる <span class="ar">→</span></a>
-          <a class="btn btn--line" href="https://lin.ee/RwCKSSE" target="_blank" rel="noopener">LINEで問い合わせ</a>
+          <a class="btn btn--line" href="https://lin.ee/RwCKSSE" data-cms-href="site.lineUrl" target="_blank" rel="noopener">LINEで問い合わせ</a>
         </div>
       </div>
     </div>
@@ -90,15 +90,15 @@
     <div class="event-card reveal d2" style="margin-top:22px">
       <div class="when" style="background:var(--beige);color:var(--ink)">
         <span class="badge" style="color:var(--gold-deep)">Past</span>
-        <span class="date" style="color:var(--ink)">2026年<br>6月 開催</span>
+        <span class="date" style="color:var(--ink)" data-cms="seminar.pastDate">2026年<br>6月 開催</span>
         <span class="st" style="color:var(--sub)">開催済み</span>
       </div>
       <div class="det">
         <h3>第1回 体験会・韓国美容セミナー（開催の様子）</h3>
-        <p>2026年6月、第1回の体験会・韓国美容セミナーを開催しました。Coëval をはじめとするプロ用商材の体験と、韓国美容に関するセミナーを実施。多くのサロン様にご参加いただきました。</p>
+        <p data-cms="seminar.pastDesc">2026年6月、第1回の体験会・韓国美容セミナーを開催しました。Coëval をはじめとするプロ用商材の体験と、韓国美容に関するセミナーを実施。多くのサロン様にご参加いただきました。</p>
         <div class="tags"><span>過去開催</span><span>商材体験</span><span>手技デモ</span></div>
         <figure class="event-photo">
-          <img src="assets/seminar-2026-06.jpg" alt="2026年6月 第1回 体験会・韓国美容セミナーの開催の様子" loading="lazy" />
+          <img src="assets/seminar-2026-06.jpg" data-cms-src="seminar.pastPhoto" alt="2026年6月 第1回 体験会・韓国美容セミナーの開催の様子" loading="lazy" />
           <figcaption>2026年6月 第1回 体験会・韓国美容セミナー 開催の様子</figcaption>
         </figure>
       </div>
@@ -130,7 +130,7 @@
     <p class="lead">参加のご希望・ご質問は、フォームまたは LINE よりお気軽にどうぞ。</p>
     <div class="btn-row is-center">
       <a class="btn btn--light" href="contact.html">体験会・セミナーを申し込む <span class="ar">→</span></a>
-      <a class="btn btn--line" href="https://lin.ee/RwCKSSE" target="_blank" rel="noopener">LINEで友だち追加</a>
+      <a class="btn btn--line" href="https://lin.ee/RwCKSSE" data-cms-href="site.lineUrl" target="_blank" rel="noopener">LINEで友だち追加</a>
     </div>
   </div>
 </section>
@@ -157,8 +157,8 @@
         <h4>Company</h4>
         <p>
           GLOBAL NOVIA JAPAN<br>
-          〒266-0033 千葉県千葉市緑区おゆみ野南2-8-1 Moderno 603<br>
-          Mail：<a href="mailto:info@globalnoviajp.com">info@globalnoviajp.com</a>
+          <span data-cms="site.address">〒266-0033 千葉県千葉市緑区おゆみ野南2-8-1 Moderno 603</span><br>
+          Mail：<a href="mailto:info@globalnoviajp.com" data-cms="site.email" data-cms-href="site.email" data-cms-href-prefix="mailto:">info@globalnoviajp.com</a>
         </p>
         <a class="btn btn--gold" style="color:#fff;border-color:var(--gold)" href="contact.html">お問い合わせ <span class="ar">→</span></a>
       </div>
@@ -170,5 +170,6 @@
   </div>
 </footer>
 <script src="js/site.js"></script>
+<script src="js/cms.js"></script>
 </body>
 </html>
