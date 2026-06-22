@@ -1,0 +1,45 @@
+# Decap CMS 設定 — GLOBAL NOVIA JAPAN
+# repo は GitHub リポジトリ作成後に「ユーザー名/リポジトリ名」へ要変更。
+backend:
+  name: github
+  repo: Zhao73/globalnovia-site   # GitHub ユーザー: Zhao73
+  branch: main
+  base_url: https://globalnoviajp.com
+  auth_endpoint: /.netlify/functions/auth
+
+media_folder: "assets"      # 画像のアップロード先
+public_folder: "/assets"
+locale: "ja"
+publish_mode: simple
+
+collections:
+  - name: "settings"
+    label: "サイト基本情報"
+    delete: false
+    editor: { preview: false }
+    files:
+      - name: "site"
+        label: "メール・LINE・住所"
+        file: "_data/site.json"
+        fields:
+          - { label: "会社名", name: "company", widget: "string" }
+          - { label: "メールアドレス", name: "email", widget: "string" }
+          - { label: "LINE 友だち追加リンク", name: "lineUrl", widget: "string" }
+          - { label: "郵便番号", name: "zip", widget: "string" }
+          - { label: "住所", name: "address", widget: "string" }
+
+  - name: "seminar"
+    label: "体験会・セミナー（開催情報）"
+    delete: false
+    editor: { preview: false }
+    files:
+      - name: "events"
+        label: "開催情報"
+        file: "_data/seminar.json"
+        fields:
+          - { label: "次回｜開催時期", name: "nextDate", widget: "string" }
+          - { label: "次回｜状態", name: "nextStatus", widget: "string" }
+          - { label: "次回｜説明文", name: "nextDesc", widget: "text" }
+          - { label: "過去｜開催時期", name: "pastDate", widget: "string" }
+          - { label: "過去｜説明文", name: "pastDesc", widget: "text" }
+          - { label: "過去｜写真", name: "pastPhoto", widget: "image" }
